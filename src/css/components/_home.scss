@@ -44,9 +44,36 @@
   }
   &__block-bottom {
     margin-top: 120px;
+    padding-top: 200px;
     background-image: url("../images/bg-bottom.png");
     background-repeat: no-repeat;
-    background-size: 100% 1530px;
+    background-size: 100%;
     height: 2000px;
+  }
+  .swiper {
+    &-slide {
+      width: 300px;
+    }
+    &-pagination {
+      margin-top: 100px;
+      &-bullet {
+        width: 12px;
+        height: 12px;
+        opacity: 0.2;
+        background-color: $white;
+        outline: none;
+        &-active {
+          opacity: 1;
+        }
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  hr {
+    background-color: #C4C4C4;
+    opacity: 0.1;
   }
 }

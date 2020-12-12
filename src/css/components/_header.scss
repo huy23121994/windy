@@ -6,6 +6,9 @@
     display: flex;
     align-items: center;
   }
+  &__brand {
+    margin-right: 50px;
+  }
   &__left {
     margin-right: auto;
     a {
