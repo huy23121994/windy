@@ -5,14 +5,10 @@
 .semi-b{
   font-weight: 600!important;
 }
-.font-s-normal {
-  font-size: 16px;
-}
-.font-s-medium {
-  font-size: 14px;
-}
-.font-s-small {
-  font-size: 12px;
+.font {
+  &-sm{font-size: 14px;}
+  &-xs{font-size: 12px;}
+  &-lg{font-size: 18px;}
 }
 .align-sub {
   vertical-align: sub;
@@ -31,29 +27,6 @@
   text-align: center;
   border: 0;
   outline: none;
-  &.btn-success {
-    background-color: $green;
-    color: #fff;
-    &:hover {
-      background-color: $green-1;
-      text-decoration: none;
-    }
-  }
-  &.btn-black {
-    background-color: $black;
-    color: #fff;
-    &:hover {
-      background-color: $dark;
-      text-decoration: none;
-    }
-  }
-}
-
-
-.title-item {
-  font-weight: 500;
-  font-size: 22px;
-  color: $dark;
 }
 
 .scrollbar {

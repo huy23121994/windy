@@ -1,3 +1,19 @@
 .header {
-	
+  color: $white;
+  padding: 23px 0;
+  font-size: 14px;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  &__left {
+    margin-right: auto;
+    a {
+      margin: 0 20px;
+    }
+  }
+  &__right {
+    font-family: $font-inter;
+    font-weight: 600;
+  }
 }
