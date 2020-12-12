@@ -1,0 +1,53 @@
+img {
+  max-width: 100%;
+}
+
+input {
+  &[type="text"], &[type="password"], &[type="range"]{
+    width: 100%;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: $font-base;
+  color: $dark-1;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro';
+  font-weight: 700;
+  font-display: swap;
+  src:  url(../fonts/AvenirNextLTPro-Bold.otf);
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro';
+  font-weight: 500;
+  font-display: swap;
+  src:  url(../fonts/AvenirNextLTPro-Demi.otf);
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro';
+  font-weight: 400;
+  font-display: swap;
+  src:  url(../fonts/AvenirNextLTPro-Regular.otf);
+}

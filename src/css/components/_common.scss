@@ -1,0 +1,78 @@
+.text-underline{
+  text-decoration: underline;
+}
+
+.semi-b{
+  font-weight: 600!important;
+}
+.font-s-normal {
+  font-size: 16px;
+}
+.font-s-medium {
+  font-size: 14px;
+}
+.font-s-small {
+  font-size: 12px;
+}
+.align-sub {
+  vertical-align: sub;
+}
+.fas {
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 5px;
+  min-width: 200px;
+  text-align: center;
+  border: 0;
+  outline: none;
+  &.btn-success {
+    background-color: $green;
+    color: #fff;
+    &:hover {
+      background-color: $green-1;
+      text-decoration: none;
+    }
+  }
+  &.btn-black {
+    background-color: $black;
+    color: #fff;
+    &:hover {
+      background-color: $dark;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.title-item {
+  font-weight: 500;
+  font-size: 22px;
+  color: $dark;
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 2px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #555;
+  }
+  
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: #ccc;
+  }
+  
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
