@@ -6,6 +6,7 @@
   width: 1400px;
   max-width: 100%;
   margin: 0 auto;
+  overflow: hidden;
   @media screen and(min-width: 480px) {
     background-size: auto 2220px;
   }
@@ -78,6 +79,10 @@
       background-color: transparent;
       padding-top: 200px;
     }
+
+    @media screen and(min-width: 1350px) {
+      background-position: top;
+    }
   }
   .swiper {
     &-slide {
@@ -90,7 +95,7 @@
       @media screen and(min-width: $breakpoint-lg) {
         margin-top: 100px;
         left: 15px;
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
       }
       &-bullet {
         width: 12px;
@@ -127,14 +132,24 @@
     width: 280px;
     margin: 0 auto;
     img:first-child {
-      left: -62px;
+      left: -40px;
       top: 175px;
     }
     img:nth-child(2) {
-      left: -40px;
+      left: -20px;
       top: 268px;
     }
-    @media screen and(min-width: $breakpoint-md) {
+    .main {
+      margin-left: 20px;
+    }
+    .bounce {
+      position: absolute;
+      right: -20px;
+      top: 100px;
+      right: -100px;
+      width: 220px;
+    }
+    @media screen and(min-width: $breakpoint-lg) {
       width: 350px;
       img:first-child {
         left: 50px;
@@ -144,6 +159,57 @@
         left: 90px;
         top: 300px;
       }
+      .bounce {
+        right: -20px;
+        width: 296px;
+      }
+    }
+  }
+  .img02 {
+    position: relative;
+    .bounce {
+      position: absolute;
+      right: -30px;
+      bottom: 20px;
+      width: 45%;
+      @media screen and(min-width: $breakpoint-lg) {
+        bottom: 30px;
+      }
+    }
+  }
+  .img03 {
+    position: relative;
+    .bounce {
+      position: absolute;
+      left: 0;
+      width: 46%;
+      top: 20px;
+      &-2 {
+        position: absolute;
+        width: 24%;
+        bottom: 70px;
+        left: 11%;
+      }
+      &-3 {
+        position: absolute;
+        width: 48%;
+        bottom: -30px;
+        right: 0%;
+      }
+      @media screen and(min-width: $breakpoint-lg) {
+        left: 5px;
+        width: 45%;
+        top: 50px;
+      }
+    }
+  }
+  .img04 {
+    position: relative;
+    .bounce {
+      position: absolute;
+      right: -10px;
+      bottom: 30px;
+      width: 43%;
     }
   }
 }

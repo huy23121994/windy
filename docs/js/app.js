@@ -19,5 +19,15 @@ $(document).ready(function () {
     } else {
       $('header').removeClass('active');
     }
+  });
+
+  $(window).scroll(function () {
+    $('.animate').each(function () {
+      var offset = $(this).offset().top;
+      var animateType = $(this).data('animate');
+      if (!$(this).hasClass('animated') && (offset - window.innerHeight + 80) <= window.pageYOffset) {
+        $(this).addClass('animated ' + animateType);
+      }
+    })
   })
 });
