@@ -1,16 +1,27 @@
 .header {
   color: $white;
   padding: 23px 0;
-  font-size: 14px;
+  font-size: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  @media screen and(min-width: $breakpoint-sm) {
+    font-size: 14px;
+  }
+  &.active {
+    background-color: #262558;
+  }
   .container {
     display: flex;
     align-items: center;
   }
   &__brand {
-    margin-right: 50px;
+    margin-right: 10px;
+    @media screen and(min-width: $breakpoint-sm) {
+      margin-right: 50px;
+    }
   }
   &__left {
-    margin-right: auto;
     a {
       margin: 0 20px;
     }
@@ -18,5 +29,24 @@
   &__right {
     font-family: $font-inter;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    .dropdown {
+      border: 1px solid #8e8dc0;
+      box-sizing: border-box;
+      border-radius: 30px;
+      padding: 5px 25px 5px 16px;
+      height: 36px;
+      margin-left: 5px;
+      cursor: pointer;
+      background-image: url("../images/caret.png");
+      background-repeat: no-repeat;
+      background-position: center right 9px;
+      @media screen and(min-width: $breakpoint-sm) {
+        margin-left: 20px;
+        padding: 5px 20px 5px 12px;
+      }
+    }
   }
 }
