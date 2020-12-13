@@ -23,6 +23,10 @@
     font-size: 18px;
     line-height: 28px;
   }
+  &--small {
+    font-size: 14px;
+    line-height: 22px;
+  }
   &--sub {
     font-size: 28px;
     line-height: 36px;
@@ -30,6 +34,7 @@
 }
 
 .home {
+  position: relative;
   &__block-top {
     margin-bottom: 210px;
   }
@@ -47,8 +52,8 @@
     padding-top: 200px;
     background-image: url("../images/bg-bottom.png");
     background-repeat: no-repeat;
-    background-size: 100%;
-    height: 2000px;
+    background-position: bottom;
+    background-size: cover;
   }
   .swiper {
     &-slide {
@@ -75,5 +80,10 @@
   hr {
     background-color: #C4C4C4;
     opacity: 0.1;
+  }
+  .group-oval{
+    &-01 {
+      position: absolute;
+    }
   }
 }
