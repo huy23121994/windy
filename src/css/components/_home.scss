@@ -3,10 +3,8 @@
   background-repeat: no-repeat;
   background-size: auto 2420px;
   background-position: top left -510px;
-  width: 1400px;
   max-width: 100%;
   margin: 0 auto;
-  overflow: hidden;
   @media screen and(min-width: 480px) {
     background-size: auto 2220px;
   }
@@ -50,6 +48,7 @@
 }
 
 .home {
+  overflow: hidden;
   position: relative;
   &__block-top {
     margin-bottom: 210px;

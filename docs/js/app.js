@@ -7,6 +7,18 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  walkAndChill();
+  setInterval(walkAndChill, 10000);
+
+  function walkAndChill() {
+    $('.walk-chill').each(function () {
+      var obj = {};
+      obj.top = Math.random() * 100 * (Math.pow(-1, Math.floor(Math.random() * 2)));
+      obj[$(this).data("pst")] = Math.random() * 200 * (Math.pow(-1, Math.floor(Math.random() * 2)));
+      $(this).animate(obj, 10000, 'linear');
+    })
+  }
 });
 
 
