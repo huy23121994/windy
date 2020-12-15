@@ -48,7 +48,6 @@ $(document).ready(function () {
   });
 
   $(".go-el").click(function (e) {
-    e.preventDefault();
     var el = $(this).attr("href");
     $([document.documentElement, document.body]).animate(
       {
@@ -56,5 +55,9 @@ $(document).ready(function () {
       },
       500
     );
+  });
+
+  $("#backtotop").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 });
