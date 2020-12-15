@@ -1,15 +1,15 @@
 .wrapper {
   background-image: url("../images/bg-top.png");
   background-repeat: no-repeat;
-  background-size: auto 2420px;
+  background-size: auto 3020px;
   background-position: top left -510px;
   max-width: 100%;
   margin: 0 auto;
   @media screen and(min-width: 480px) {
-    background-size: auto 2220px;
+    background-size: auto 2420px;
   }
   @media screen and(min-width: $breakpoint-lg) {
-    background-size: 100% 1530px;
+    background-size: 100% 1630px;
     background-position: top left;
   }
 }
