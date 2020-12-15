@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
+  new Swiper(".swiper-container", {
+    slidesPerView: "auto",
     spaceBetween: 30,
     loop: true,
     autoplay: {
@@ -8,7 +8,7 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
   });
@@ -17,34 +17,44 @@ $(document).ready(function () {
   setInterval(walkAndChill, 10000);
 
   function walkAndChill() {
-    $('.walk-chill').each(function () {
+    $(".walk-chill").each(function () {
       var obj = {};
-      obj.top = Math.random() * 100 * (Math.pow(-1, Math.floor(Math.random() * 2)));
-      obj[$(this).data("pst")] = Math.random() * 200 * (Math.pow(-1, Math.floor(Math.random() * 2)));
-      $(this).animate(obj, 10000, 'linear');
-    })
+      obj.top = Math.random() * 100 * Math.pow(-1, Math.floor(Math.random() * 2));
+      obj[$(this).data("pst")] = Math.random() * 200 * Math.pow(-1, Math.floor(Math.random() * 2));
+      $(this).animate(obj, 10000, "linear");
+    });
   }
 });
-
 
 $(document).ready(function () {
   $(window).scroll(function () {
     if (window.pageYOffset > 82) {
-      if (!$('header').hasClass('active')) {
-        $('header').addClass('active')
+      if (!$("header").hasClass("active")) {
+        $("header").addClass("active");
       }
     } else {
-      $('header').removeClass('active');
+      $("header").removeClass("active");
     }
   });
 
   $(window).scroll(function () {
-    $('.animate').each(function () {
+    $(".animate").each(function () {
       var offset = $(this).offset().top;
-      var animateType = $(this).data('animate');
-      if (!$(this).hasClass('animated') && (offset - window.innerHeight + 80) <= window.pageYOffset) {
-        $(this).addClass('animated ' + animateType);
+      var animateType = $(this).data("animate");
+      if (!$(this).hasClass("animated") && offset - window.innerHeight + 80 <= window.pageYOffset) {
+        $(this).addClass("animated " + animateType);
       }
-    })
-  })
+    });
+  });
+
+  $(".go-el").click(function (e) {
+    e.preventDefault();
+    var el = $(this).attr("href");
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $(el).offset().top - 100,
+      },
+      500
+    );
+  });
 });
