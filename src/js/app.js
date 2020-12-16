@@ -28,7 +28,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(window).scroll(function () {
-    if (window.pageYOffset > 82) {
+    if (window.innerWidth > 576 && window.pageYOffset > 82) {
       if (!$("header").hasClass("active")) {
         $("header").addClass("active");
       }

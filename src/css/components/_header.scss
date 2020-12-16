@@ -2,11 +2,11 @@
   color: $white;
   padding: 23px 0;
   font-size: 11px;
-  position: sticky;
   top: 0;
   z-index: 99;
   @media screen and(min-width: $breakpoint-sm) {
     font-size: 14px;
+    position: sticky;
   }
   &.active {
     background-color: #262558;
