@@ -49,6 +49,7 @@ $(document).ready(function () {
 
   $(".go-el").click(function (e) {
     var el = $(this).attr("href");
+    $('.header__left').removeClass('active');
     $([document.documentElement, document.body]).animate(
       {
         scrollTop: $(el).offset().top - 100,
@@ -59,5 +60,14 @@ $(document).ready(function () {
 
   $("#backtotop").click(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+
+  // Open close header mobile menu
+
+  $(".bars").click(function () {
+    $(".header__left").addClass("active");
+  });
+  $(".header .close").click(function () {
+    $(".header__left").removeClass("active");
   });
 });

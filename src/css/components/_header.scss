@@ -22,8 +22,41 @@
     }
   }
   &__left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: $bg-dark;
+    z-index: 9999;
+    padding: 20px;
+    transition: 0.3s;
+    &.active {
+      left: 0;
+    }
+    &-top {
+      justify-content: space-between;
+    }
     a {
-      margin: 0 20px;
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 50px;
+      }
+    }
+    @media screen and(min-width: $breakpoint-lg) {
+      position: static;
+      padding: 0;
+      background-color: transparent;
+      font-family: $font-inter;
+      a {
+        margin: 0 20px;
+        display: inline;
+        font-size: inherit;
+      }
     }
   }
   &__right {
@@ -43,10 +76,6 @@
       background-image: url("../images/caret.png");
       background-repeat: no-repeat;
       background-position: center right 9px;
-      display: none;
-      @media screen and(min-width: 380px) {
-        display: block;
-      }
       @media screen and(min-width: $breakpoint-sm) {
         margin-left: 20px;
         padding: 5px 20px 5px 11px;
